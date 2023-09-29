@@ -1,0 +1,2 @@
+class GetsController < ApplicationController
+end
