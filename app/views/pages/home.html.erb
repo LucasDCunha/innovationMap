@@ -27,14 +27,83 @@
     </div>
 </div>
 
+<div id="myGallery" class="gall">
+    <div class="d-flex mx-3">
+        <h3>Galeria dos GETs </h3>
+        <div>
+            <button id="btnOpenGal" class="btn" onclick="openGal()">Expandir</button> 
+            <button id="btnCloseGal" class="btn btn-closeGal" onclick="closeGal()">Retrair</button>
+        </div> 
+    </div>
+    <div class="" style="overflow-x: auto; white-space: nowrap; overflow-y: hidden;">
+        <%= image_tag "2023_06_21 -  Lançamento GET   - Guilherme Oliveira-3.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "2023_06_21 -  Lançamento GET   - Guilherme Oliveira-10.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "2023_06_21 -  Lançamento GET   - Guilherme Oliveira-14.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "2023_06_27 - GET - Professor Antonio Boaventura  - Guilherme Oliveira-18.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "2023_06_27 - GET - Professor Antonio Boaventura  - Guilherme Oliveira-19.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "2023_06_27 - GET - Professor Antonio Boaventura  - Guilherme Oliveira-23.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET - Elza Soares (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET - Elza Soares (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Cardeal Leme (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Cardeal Leme (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Cardeal Leme (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Coelho Neto (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Coelho Neto (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Coelho Neto (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Golda Meir (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Golda Meir (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Golda Meir (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Gurgel do Amaral (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Gurgel do Amaral (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Gurgel do Amaral (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Hélio Smidt (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Hélio Smidt (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Hélio Smidt (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Lourenço Filho (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Lourenço Filho (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Lourenço Filho (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Luis Carlos da Fonseca (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Luis Carlos da Fonseca (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Luis Carlos da Fonseca (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Max Fleuss (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Max Fleuss (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Max Fleuss (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Pablo Picasso (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Pablo Picasso (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Pablo Picasso (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET São Paulo (1).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET São Paulo (2).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET São Paulo (3).jpg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Yolis da Silva (1).jpeg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Yolis da Silva (2).jpeg", style: 'width: 18rem;' %>
+        <%= image_tag "GET Yolis da Silva (3).jpeg", style: 'width: 18rem;' %>
+        <%= image_tag "IMG_3058.jpg", style: 'width: 18rem;' %>
+        <%= image_tag "IMG_3063.jpg", style: 'width: 18rem;' %>
+    </div>
+</div>
+
 <script>
     function openNav() {
-        document.getElementById("mySidebar").style.width = "300px";
+        document.getElementById("mySidebar").style.width = "350px";
+        document.getElementById("mySidebar").style.paddingLeft = "16px";
         document.getElementById("btnOpen").style.display = "none";
     }
 
     function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("btnOpen").style.display = "block";
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.paddingLeft = "0";
+        document.getElementById("btnOpen").style.display = "block";
+    }
+
+    function openGal() {
+        document.getElementById("myGallery").style.height = "250px";
+        document.getElementById("btnOpenGal").style.display = "none";
+        document.getElementById("btnCloseGal").style.display = "block";
+    }
+
+    function closeGal() {
+        document.getElementById("myGallery").style.height = "80px";
+        document.getElementById("btnOpenGal").style.display = "block";
+        document.getElementById("btnCloseGal").style.display = "none";
     }
 </script>
