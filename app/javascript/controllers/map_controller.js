@@ -1,27 +1,28 @@
 import { Controller } from "@hotwired/stimulus"
-import mapboxgl from 'mapbox-gl'
 
 export default class extends Controller {
   static values = {
-    apiKey: String,
     markers: Array
   }
 
   connect() {
     mapboxgl.accessToken = 'pk.eyJ1IjoibHVjYXNkY3ByZWYiLCJhIjoiY2xuNHc5Mmo5MDJzdTJpcGpxNWowdzM4NSJ9.YvT9a0Rt4VcP7KztDvfZow';
     this.map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-43.20082690646508, -22.909788343891712],
-    zoom: 15,
+      container: this.element,
+      style: 'mapbox://styles/mapbox/streets-v12',
     });
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
+      new mapboxgl.Marker({
+        color: "red",
+        draggable: false
+        })
         .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
         .addTo(this.map)
     })
   }

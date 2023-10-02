@@ -1,3 +1,40 @@
-<div id='map' style='width: 100%; height: 97vh;'
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"></div>
+<%= image_tag "LogoGET.svg", style: 'z-index: 9; position: absolute;' %>
+
+<div id='map' style='width: 100%; height: 100vh; overflow:hidden;' data-controller="map" data-map-markers-value="<%= @markers.to_json %>"></div>
+
+<button id="btnOpen" class="openbtn" onclick="openNav()"><i class="fa-solid fa-arrow-left"></i> O que são GETs</button> 
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div class='container'>
+        <h5> O que são GETs </h5>
+        <p>Os Ginásios Educacionais Tecnológicos, GETs, fazem parte de uma nova concepção de escola do século XXI: um local de inovação didático-pedagógica, 
+        experimentação do conhecimento e colaboração ativa de seus sujeitos. Por meio da abordagem das Ciências, Tecnologia, Engenharia, Artes e Matemática 
+        (da sigla inglesa STEAM) e da cultura “mão na massa” , esses movimentos estão alinhados às tendências mundiais de aproximação da educação escolar ao 
+        contexto do aluno, inspirando-o pela resolução de situações-problema do seu cotidiano na sociedade atual.</p>
+        <p>Os GETs têm o objetivo de potencializar o 
+        desenvolvimento de competências e habilidades por meio de atividades dinâmicas, abordagens interdisciplinares, métodos ativos de aprendizagem e recursos 
+        que também promovem o desenvolvimento da cultura digital. É um conceito pedagógico no qual o conteúdo didático é abordado a partir de necessidades reais, 
+        vividas e trazidas pelos próprios alunos de forma colaborativa.</p>
+        <h5> Pilares do GET </h5>
+        <p>1. <b>Aprendizagem mão na massa:</b> aprender, por meio da criação, da investigação, da experimentação e da colaboração.</p>
+        <p>2. <b>Desenvolvimento integral:</b> recursos e práticas que potencializam o desenvolvimento cognitivo, físico, emocional, social e cultural dos estudantes.</p>
+        <p>3. <b>Cultura Digital:</b> democratizar o uso qualificado e responsável das tecnologias digitais para uma sociedade mais justa, equânime e desenvolvida.</p>
+        <p>4. <b>Sustentabilidade:</b> responsabilidade com a coexistência harmônica entre os aspectos social, econômico e ambiental.
+        <p>5. <b>Vetores de transformação:</b> escolas incubadoras de inovação pedagógica para a rede de ensino, com a missão de inspirar boas práticas.
+        <p>6. <b>Tecnologias Digitais da Informação e Comunicação (TDICs):</b> Estas Tecnologias abrangem o uso de recursos digitais que possibilitam a conexão entre pessoas e ambientes com base no uso de dispositivos, tais como: computadores, tablets, celulares
+        <p>7. <b>Pensamento Computacional:</b> O pensamento computacional pode ser entendido como uma série de “processos de pensamento envolvidos na formulação de problemas e suas soluções”.</p>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "300px";
+        document.getElementById("btnOpen").style.display = "none";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("btnOpen").style.display = "block";
+    }
+</script>
