@@ -15,10 +15,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_172722) do
   enable_extension "plpgsql"
 
   create_table "gets", force: :cascade do |t|
-    t.string "nome"
-    t.string "endereco"
+    t.string "name"
+    t.string "address"
+    t.integer "cre"
+    t.string "designacao"
     t.float "latitude"
-    t.float "longetude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

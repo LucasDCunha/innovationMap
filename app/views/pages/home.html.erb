@@ -1,23 +1,3 @@
-<div id='map' style='width: 100%; height: 97vh;'></div>
-
-
-
-
-
-
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibHVjYXNkY3ByZWYiLCJhIjoiY2xuNHc5Mmo5MDJzdTJpcGpxNWowdzM4NSJ9.YvT9a0Rt4VcP7KztDvfZow';
-    this.map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-43.20082690646508, -22.909788343891712],
-    zoom: 15,
-    });
-
-    this.marker = new mapboxgl.Marker({
-    color: "red",
-    draggable: false
-    }).setLngLat([-43.20082690646508, -22.909788343891712])
-    .addTo(this.map);
-
-</script>
+<div id='map' style='width: 100%; height: 97vh;'
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"></div>

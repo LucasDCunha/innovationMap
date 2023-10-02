@@ -100,7 +100,6 @@ GEM
     ffi (1.16.2-x64-mingw-ucrt)
     font-awesome-sass (6.4.2)
       sassc (~> 2.0)
-    geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -254,7 +253,6 @@ DEPENDENCIES
   cssbundling-rails
   debug
   font-awesome-sass
-  geocoder
   importmap-rails
   jbuilder
   jsbundling-rails

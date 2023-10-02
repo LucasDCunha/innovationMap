@@ -77,4 +77,3 @@ gem 'cssbundling-rails'
 gem "font-awesome-sass"
 gem 'webpacker'
 gem 'bootstrap'
-gem "geocoder"
